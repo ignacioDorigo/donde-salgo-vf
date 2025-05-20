@@ -1,23 +1,14 @@
 import React from "react";
 import LoginForm from "../components/LoginForm/LoginForm";
-
-
+import "./LoginPage.css";
 
 export default function Login() {
-
-  const styles = {
-  login: {
-    display: "flex",
-    justifyContent: "center", // ← esto estaba mal como "center"
-    alignItems: "center",
-    height: "100vh",
-    backgroundColor: "#170b3a", // ← color de fondo que estás usando
-  },
-};
-
   return (
-    <div style={styles.login}>
-      <LoginForm />
+    <div className="login__container">
+      <div className="login__image" />
+      <div className="login__form-wrapper">
+        <LoginForm />
+      </div>
     </div>
   );
 }
