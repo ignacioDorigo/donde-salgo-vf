@@ -1,12 +1,16 @@
 .logo {
     width: 100%;
     cursor: pointer;
-    
+
 
 }
 
 .logo__img {
-    height: 7rem;
-    
+    height: 4rem;
+}
 
+@media (min-width: 768px) {
+    .logo__img {
+        height: 7rem;
+    }
 }
