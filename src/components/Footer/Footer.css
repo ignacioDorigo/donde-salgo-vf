@@ -1,0 +1,35 @@
+.footer__bg {
+    /* background: linear-gradient(to bottom, #FFFFFF 20%, #170b3a); */
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.contenedor {
+    margin: 0 auto;
+    width: 95%;
+    max-width: 120rem;
+
+}
+
+.div__redes {
+    display: flex;
+    gap: 1rem
+}
+
+.svg__redes {
+    stroke: #FFFFFF;
+}
+
+.svg__redes:hover {
+    cursor: pointer;
+    stroke: #8b8b8b;
+}
+
+.footer__logo { 
+    filter: grayscale(100%);
+}
