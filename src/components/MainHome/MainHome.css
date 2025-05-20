@@ -1,0 +1,57 @@
+.main__bg {
+    background-color: #170b3a;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.main__titulo {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 4rem;
+}
+
+/* Contenedor buscador y botón juntos */
+.div__buscar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 2rem auto 0;
+    background-color: #2d174d;
+    /* oscuro para la caja */
+    border-radius: 50px;
+    padding: 0.3rem 0.5rem;
+}
+
+/* Input sin bordes, solo color placeholder */
+.input__buscar {
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    color: #b1b0b5;
+    background: transparent;
+    outline: none;
+    width: 300px;
+}
+
+.input__buscar::placeholder {
+    color: #b1b0b5;
+}
+
+/* Botón junto al input, con bordes redondeados */
+.btn_buscar {
+    background-color: #8039e5;
+    border: none;
+    color: white;
+    font-size: 1.6rem;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 0.5rem;
+}
+
+.btn_buscar:hover {
+    background-color: #6b2fc4;
+}

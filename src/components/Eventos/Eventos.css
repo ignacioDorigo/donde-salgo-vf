@@ -1,0 +1,124 @@
+.eventos__bg {
+    background-color: #ffffff;
+    padding: 3rem 2rem;
+    padding-bottom: 10rem;
+    margin-bottom: 30;
+
+}
+
+/* .eventos__contenido {
+    background-color: #ffffff;
+} */
+
+.contenedor {
+    margin: 0 auto;
+    max-width: 120rem;
+    width: 95%;
+}
+
+.eventos__titulo,
+.explorar__titulo {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+/* ESTILO CLONADO DEL CALENDARIO DE LA IMAGEN */
+
+.calendario__contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    width: fit-content;
+    /* margin: 0 auto; */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.calendario__caja {
+    background: #7e3ff2;
+    color: white;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.calendario__caja:last-child {
+    border-right: none;
+}
+
+.calendario__caja:hover {
+    background-color: #692fcf;
+    transform: translateY(-3px);
+}
+
+.calendario__dia {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+}
+
+.calendario__numero {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.div__filtros {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5rem
+}
+
+
+.filtro__categorias {
+    width: 30%;
+    padding: 1.5rem 2rem;
+    background-color: #ecedf6;
+    border: none;
+    color: #15161c;
+    border-radius: 5px;
+
+    /* Elimina la flecha nativa */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    /* Flechita personalizada */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='70,100 30,40 110,40' fill='%2315161c'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.5rem center;
+    background-size: 1rem;
+}
+
+/* .filtro__categorias {
+    width: 30%;
+    padding: 1.5rem 2rem;
+    background-color: #edeef7;
+    border: none;
+    color: #15161c;
+    border-radius: 5px;
+    padding-right: 4rem;
+    background-color: #ecedf6;
+} */
+
+.explorar__titulo {
+    margin: 2rem 0rem;
+}
+
+.div__salidas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}

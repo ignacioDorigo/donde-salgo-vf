@@ -1,0 +1,22 @@
+.categorias__bg {
+    background-color: #FFFFFF;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+}
+
+.contenedor {
+    margin: 0 auto;
+    max-width: 120rem;
+    width: 95%;
+}
+
+.div_categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem
+}
+
+.categoria__titulo{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
