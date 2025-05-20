@@ -118,7 +118,19 @@
 }
 
 .div__salidas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    display: none;
+}
+
+
+/* Mostrar solo grilla en escritorio */
+@media (min-width: 769px) {
+    .carousel__individual {
+        display: none;
+    }
+
+    .div__salidas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
 }

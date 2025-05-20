@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Eventos.css";
 import Salidas from "../Salidas/Salidas";
 
 export default function Eventos() {
+  const [indexActual, setIndexActual] = useState(0);
+
+  const siguiente = () => {
+    setIndexActual((prev) => (prev + 1) % salidas.length);
+  };
+
+  const anterior = () => {
+    setIndexActual((prev) => (prev - 1 + salidas.length) % salidas.length);
+  };
   const salidas = [
     {
       nombre: "Club Vértigo",
@@ -84,10 +93,26 @@ export default function Eventos() {
 
         <h2 className="explorar__titulo">Explorar salidas</h2>
 
+        {/* Vista de escritorio: grilla */}
         <div className="div__salidas">
           {salidas.map((salida, index) => (
             <Salidas key={index} salida={salida} />
           ))}
+        </div>
+
+        {/* Vista mobile: carrusel con flechas */}
+        <div className="carousel__individual">
+          <button className="carousel__flecha left" onClick={anterior}>
+            ‹
+          </button>
+
+          <div className="carousel__categoria">
+            <Salidas salida={salidas[indexActual]} />
+          </div>
+
+          <button className="carousel__flecha right" onClick={siguiente}>
+            ›
+          </button>
         </div>
       </div>
     </div>
