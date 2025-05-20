@@ -5,25 +5,31 @@ import { Link } from "react-router-dom";
 
 export default function LoginForm() {
   const loguearse = (e) => {
-    console.log(e.target);
+    e.preventDefault();
+    console.log("Ingresanndo...");
   };
+
   return (
-    <form className="login">
-      <Logo />
+    <form className="login__form">
+      <div className="logo__wrapper">
+        <Logo />
+      </div>
 
-      <h1>Crear cuenta</h1>
+      <h1 className="login__title">Iniciar Sesión</h1>
 
-      <input placeholder="Nombre" type="text"></input>
-      <input placeholder="Correo" type="email"></input>
-      <input placeholder="Nombre" type="password"></input>
+      <input className="login__input" placeholder="Correo" type="email" />
+      <input
+        className="login__input"
+        placeholder="Contraseña"
+        type="password"
+      />
 
-      <button onClick={loguearse}></button>
+      <button className="login__button" onClick={loguearse}>
+        Ingresar
+      </button>
 
-      <p>
-        Ya tenées cuenta?
-        <Link to="login">
-          <p>Ingresá aca</p>
-        </Link>
+      <p className="login__footer">
+        ¿No tenés cuenta? <Link to="/register">Registrate</Link>
       </p>
     </form>
   );

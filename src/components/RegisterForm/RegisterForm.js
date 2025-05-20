@@ -4,7 +4,7 @@ import Logo from "../Logo/Logo";
 import "./RegisterForm.css";
 
 export default function RegisterForm() {
-  const loguearse = (e) => {
+  const registrarse = (e) => {
     e.preventDefault();
     console.log("Registrarse...");
   };
@@ -25,7 +25,7 @@ export default function RegisterForm() {
         type="password"
       />
 
-      <button className="register__button" onClick={loguearse}>
+      <button className="register__button" onClick={registrarse}>
         Registrarse
       </button>
 
