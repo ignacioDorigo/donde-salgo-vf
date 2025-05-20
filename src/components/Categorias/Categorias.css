@@ -1,22 +1,86 @@
 .categorias__bg {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 3rem 2rem;
     margin-top: 4rem;
 }
 
-.contenedor {
+.categorias__contenido {
     margin: 0 auto;
     max-width: 120rem;
     width: 95%;
 }
 
+.categoria__titulo {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* 🖥️ Desktop: grilla */
 .div_categorias {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem
+    gap: 2rem;
 }
 
-.categoria__titulo{
-    font-size: 3rem;
-    margin-bottom: 1rem;
+/* 📱 Mobile: carrusel individual */
+.carousel__individual {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.carousel__categoria {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.carousel__flecha {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    font-size: 2.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 2;
+    top: 40%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease;
+}
+
+.carousel__flecha:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel__flecha.left {
+    left: -2rem;
+}
+
+.carousel__flecha.right {
+    right: -2rem;
+}
+
+/* Mostrar solo carrusel en móviles */
+@media (max-width: 768px) {
+    .div_categorias {
+        display: none;
+    }
+
+    .carousel__individual {
+        display: flex;
+    }
+}
+
+/* Mostrar solo grilla en escritorio */
+@media (min-width: 769px) {
+    .carousel__individual {
+        display: none;
+    }
+
+    .div_categorias {
+        display: grid;
+    }
 }
