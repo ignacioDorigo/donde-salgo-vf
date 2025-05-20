@@ -23,24 +23,28 @@ export default function Navbar() {
             menuAbierto ? "menu_mobile_visible" : ""
           }`}
         >
-          <p className="enlaces" onClick={() => setMenuAbierto(false)}>
-            Ingresar
-          </p>
-          <p
-            className="enlaces crearCuenta"
-            onClick={() => setMenuAbierto(false)}
-          >
-            Crear cuenta
-          </p>
+          <Link to="/login">
+            <p className="enlaces" onClick={() => setMenuAbierto(false)}>
+              Ingresar
+            </p>
+          </Link>
+          <Link to="/register">
+            <p
+              className="enlaces crearCuenta"
+              onClick={() => setMenuAbierto(false)}
+            >
+              Crear cuenta
+            </p>
+          </Link>
         </div>
 
         {/* Escritorio */}
         <div className="div__nav__enlaces">
-          <Link to="login">
-            <p className="enlaces">Ingresar</p>
+          <Link to="login" className="enlaces">
+            Ingresar
           </Link>
-          <Link to="register">
-            <p className="enlaces crearCuenta">Crear cuenta</p>
+          <Link to="register" className="enlaces crearCuenta">
+            Crear cuenta
           </Link>
         </div>
       </nav>
