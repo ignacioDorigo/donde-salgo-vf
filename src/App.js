@@ -6,6 +6,8 @@ import Novedades from "./pages/Novedades";
 import EventosGratis from "./pages/EventosGratis";
 import SalidaSeleccionada from "./pages/SalidaSeleccionada";
 import "./App.css";
+import Login from "./pages/Login.js";
+import Register from "./pages/Register.js";
 
 export default function App() {
   return (
@@ -16,6 +18,8 @@ export default function App() {
         <Route path="/novedades" element={<Novedades />} />
         <Route path="/eventos-gratis" element={<EventosGratis />} />
         <Route path="/salida/:id" element={<SalidaSeleccionada />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </Router>
   );

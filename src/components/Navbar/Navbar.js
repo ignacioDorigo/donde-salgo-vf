@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../Logo/Logo";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [menuAbierto, setMenuAbierto] = useState(false);
@@ -35,8 +36,12 @@ export default function Navbar() {
 
         {/* Escritorio */}
         <div className="div__nav__enlaces">
-          <p className="enlaces">Ingresar</p>
-          <p className="enlaces crearCuenta">Crear cuenta</p>
+          <Link to="login">
+            <p className="enlaces">Ingresar</p>
+          </Link>
+          <Link to="register">
+            <p className="enlaces crearCuenta">Crear cuenta</p>
+          </Link>
         </div>
       </nav>
     </div>
