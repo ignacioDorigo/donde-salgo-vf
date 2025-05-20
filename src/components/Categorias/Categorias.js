@@ -2,12 +2,25 @@
 import React, { useState } from "react";
 import "./Categorias.css";
 import Categoria from "../Categoria/Categoria";
+import { Link } from "react-router-dom";
 
 export default function Categorias() {
   const categorias = [
-    { nombre: "Lo más elegido hoy", imagen: "/categorias/categoria1.webp" },
-    { nombre: "Novedades", imagen: "/categorias/categoria2.webp" },
-    { nombre: "Eventos gratis", imagen: "/categorias/categoria3.webp" },
+    {
+      nombre: "Lo más elegido hoy",
+      imagen: "/categorias/categoria1.webp",
+      rutaComponente: "/lo-mas-elegido",
+    },
+    {
+      nombre: "Novedades",
+      imagen: "/categorias/categoria2.webp",
+      rutaComponente: "/novedades",
+    },
+    {
+      nombre: "Eventos gratis",
+      imagen: "/categorias/categoria3.webp",
+      rutaComponente: "/eventos-gratis",
+    },
   ];
 
   const [indexActual, setIndexActual] = useState(0);
@@ -17,7 +30,9 @@ export default function Categorias() {
   };
 
   const anterior = () => {
-    setIndexActual((prev) => (prev - 1 + categorias.length) % categorias.length);
+    setIndexActual(
+      (prev) => (prev - 1 + categorias.length) % categorias.length
+    );
   };
 
   return (
@@ -28,7 +43,9 @@ export default function Categorias() {
         {/* Vista de escritorio: grilla */}
         <div className="div_categorias">
           {categorias.map((catego, index) => (
-            <Categoria key={index} categoria={catego} />
+            <Link to={catego.rutaComponente}>
+              <Categoria key={index} categoria={catego} />
+            </Link>
           ))}
         </div>
 

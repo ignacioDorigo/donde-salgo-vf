@@ -11,8 +11,11 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/" element={<Home />} />
+        <Route path="/lo-mas-elegido" element={<LoMasElegido />} />
+        <Route path="/novedades" element={<Novedades />} />
+        <Route path="/eventos-gratis" element={<EventosGratis />} />
+        <Route path="/salida/:id" element={<SalidaSeleccionada />} />
       </Routes>
     </Router>
   );
