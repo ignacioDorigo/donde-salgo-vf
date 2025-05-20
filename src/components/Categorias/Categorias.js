@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "./Categorias.css";
 import Categoria from "../Categoria/Categoria";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default function Categorias() {
   const categorias = [
@@ -43,9 +43,7 @@ export default function Categorias() {
         {/* Vista de escritorio: grilla */}
         <div className="div_categorias">
           {categorias.map((catego, index) => (
-            <Link to={catego.rutaComponente}>
-              <Categoria key={index} categoria={catego} />
-            </Link>
+            <Categoria key={index} categoria={catego} />
           ))}
         </div>
 
