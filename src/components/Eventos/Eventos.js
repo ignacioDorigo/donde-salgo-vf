@@ -9,12 +9,25 @@ export default function Eventos() {
   const [musicaSeleccionada, setMusicaSeleccionada] = useState("");
   const [diaSeleccionado, setDiaSeleccionado] = useState(null);
 
+  const renderPrecioSimbolico = (nombre) => {
+    switch (nombre) {
+      case "Moscu":
+        return "$$";
+      case "Wax":
+        return "$";
+      case "La Mala":
+        return "$$$";
+      default:
+        return "$";
+    }
+  };
+
   const salidas = [
     {
       nombre: "Moscu",
       categoria: "Boliche",
       calificacion: 4,
-      precio: 2500,
+      precio: renderPrecioSimbolico("Moscu"),
       imagenes: [
         "/salidas/moscu1.webp",
         "/salidas/moscu2.webp",
@@ -23,21 +36,49 @@ export default function Eventos() {
       musica: "Electrónica",
       dia: "VIE",
       descripcion:
-        "Moscú es uno de los boliches más populares del centro porteño. Con luces vibrantes y DJs internacionales, ofrece una experiencia inolvidable para los amantes de la música electrónica. Su pista principal vibra hasta altas horas de la madrugada, acompañada de barras bien surtidas y sectores VIP que elevan la experiencia nocturna.",
+        "Moscú es uno de los boliches más populares del centro porteño...",
       ubicacion:
         "Av. Costanera Rafael Obligado 6151, C1428 Cdad. Autónoma de Buenos Aires",
       comentarios: [
         {
           usuario: "Juan Pérez",
-          foto: "/usuarios/juan.jpg",
+          foto: "https://i.pravatar.cc/50?img=58",
           comentario: "¡Excelente ambiente y buena música!",
           calificacion: 5,
+          zona: "Recoleta",
+          fechaComentario: "10 de abril de 2025",
         },
         {
           usuario: "Lucía Fernández",
-          foto: "/usuarios/lucia.jpg",
+          foto: "https://i.pravatar.cc/50?img=2",
           comentario: "Un poco caro pero la pasé genial.",
           calificacion: 4,
+          zona: "Caballito",
+          fechaComentario: "8 de abril de 2025",
+        },
+        {
+          usuario: "Federico Álvarez",
+          foto: "https://i.pravatar.cc/50?img=12",
+          comentario: "Luces increíbles y buena vibra.",
+          calificacion: 4,
+          zona: "Belgrano",
+          fechaComentario: "5 de abril de 2025",
+        },
+        {
+          usuario: "Nadia Torres",
+          foto: "https://i.pravatar.cc/50?img=34",
+          comentario: "La música estuvo excelente toda la noche.",
+          calificacion: 5,
+          zona: "Palermo",
+          fechaComentario: "3 de abril de 2025",
+        },
+        {
+          usuario: "Esteban Ruiz",
+          foto: "https://i.pravatar.cc/50?img=30",
+          comentario: "Volvería sin dudarlo.",
+          calificacion: 5,
+          zona: "Almagro",
+          fechaComentario: "1 de abril de 2025",
         },
       ],
     },
@@ -45,7 +86,7 @@ export default function Eventos() {
       nombre: "Wax",
       categoria: "Bar",
       calificacion: 3,
-      precio: 1500,
+      precio: renderPrecioSimbolico("Wax"),
       imagenes: [
         "/salidas/salida1.webp",
         "/salidas/wax1.webp",
@@ -54,21 +95,48 @@ export default function Eventos() {
       ],
       musica: "Rock",
       dia: "JUE",
-      descripcion:
-        "Bar Nocturno es un rincón acogedor para los amantes del rock clásico y alternativo. Ubicado en el barrio de Palermo, ofrece una carta variada de tragos, cervezas artesanales y picadas. Las bandas en vivo los jueves por la noche lo convierten en un punto de encuentro ideal para desconectar con amigos.",
+      descripcion: "Wax es un bar clásico con un toque moderno...",
       ubicacion: "Sarmiento 1728, C1042ABH Cdad. Autónoma de Buenos Aires",
       comentarios: [
         {
           usuario: "Carlos Gómez",
-          foto: "/usuarios/carlos.jpg",
+          foto: "https://i.pravatar.cc/50?img=7",
           comentario: "Buena música pero el sonido podría mejorar.",
           calificacion: 3,
+          zona: "Boedo",
+          fechaComentario: "15 de marzo de 2025",
         },
         {
           usuario: "Sofía Martínez",
-          foto: "/usuarios/sofia.jpg",
+          foto: "https://i.pravatar.cc/50?img=5",
           comentario: "Me encantó la ambientación del lugar.",
           calificacion: 4,
+          zona: "San Telmo",
+          fechaComentario: "12 de marzo de 2025",
+        },
+        {
+          usuario: "Leandro Díaz",
+          foto: "https://i.pravatar.cc/50?img=16",
+          comentario: "Buena atención pero estaba un poco lleno.",
+          calificacion: 3,
+          zona: "Villa Crespo",
+          fechaComentario: "10 de marzo de 2025",
+        },
+        {
+          usuario: "Giselle Vázquez",
+          foto: "https://i.pravatar.cc/50?img=22",
+          comentario: "Gran variedad de cervezas artesanales.",
+          calificacion: 4,
+          zona: "Barracas",
+          fechaComentario: "8 de marzo de 2025",
+        },
+        {
+          usuario: "Tomás Benítez",
+          foto: "https://i.pravatar.cc/50?img=25",
+          comentario: "Ideal para arrancar la noche.",
+          calificacion: 4,
+          zona: "Villa Urquiza",
+          fechaComentario: "5 de marzo de 2025",
         },
       ],
     },
@@ -76,7 +144,7 @@ export default function Eventos() {
       nombre: "La Mala",
       categoria: "Boliche",
       calificacion: 4.5,
-      precio: 0,
+      precio: renderPrecioSimbolico("La Mala"),
       imagenes: [
         "/salidas/lamala1.webp",
         "/salidas/lamala2.webp",
@@ -86,21 +154,57 @@ export default function Eventos() {
       musica: "Reggaetón",
       dia: "SÁB",
       descripcion:
-        "Refugio Dance es un espacio vibrante que celebra el reggaetón y los ritmos latinos. Con entrada gratuita, se llena de jóvenes cada sábado por la noche. Las luces LED y el sistema de sonido envolvente generan una experiencia única. El público disfruta de pistas amplias y shows temáticos cada semana.",
+        "La Mala es un boliche vibrante que celebra el reggaetón y los ritmos latinos...",
       ubicacion:
         "Arco 3 y 4, Av. del Libertador 3883, C1425 ABL, Cdad. Autónoma de Buenos Aires",
       comentarios: [
         {
           usuario: "Martín López",
-          foto: "/usuarios/martin.jpg",
+          foto: "https://i.pravatar.cc/50?img=8",
           comentario: "Gratis y con buena onda, ¡volveré!",
           calificacion: 5,
+          zona: "Ezeiza",
+          fechaComentario: "3 de mayo de 2025",
         },
         {
           usuario: "Valentina Ruiz",
-          foto: "/usuarios/valentina.jpg",
+          foto: "https://i.pravatar.cc/50?img=9",
           comentario: "Mucho reggaetón, ideal si te gusta ese estilo.",
           calificacion: 4,
+          zona: "Palermo",
+          fechaComentario: "2 de mayo de 2025",
+        },
+        {
+          usuario: "Camila Torres",
+          foto: "https://i.pravatar.cc/50?img=14",
+          comentario: "Excelente ambientación y seguridad.",
+          calificacion: 5,
+          zona: "Once",
+          fechaComentario: "1 de mayo de 2025",
+        },
+        {
+          usuario: "Pablo Ferreyra",
+          foto: "https://i.pravatar.cc/50?img=10",
+          comentario: "La pista se llena rápido, mejor ir temprano.",
+          calificacion: 4,
+          zona: "Liniers",
+          fechaComentario: "30 de abril de 2025",
+        },
+        {
+          usuario: "Florencia Ramírez",
+          foto: "https://i.pravatar.cc/50?img=6",
+          comentario: "Una noche increíble con amigas.",
+          calificacion: 5,
+          zona: "Villa Devoto",
+          fechaComentario: "28 de abril de 2025",
+        },
+        {
+          usuario: "Ignacio Varela",
+          foto: "https://i.pravatar.cc/50?img=17",
+          comentario: "Lo mejor de reggaetón en Buenos Aires.",
+          calificacion: 5,
+          zona: "Constitución",
+          fechaComentario: "27 de abril de 2025",
         },
       ],
     },

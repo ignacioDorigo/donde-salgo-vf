@@ -3,13 +3,6 @@ import "./Salidas.css";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Salidas({ salida }) {
-  // const navigate = useNavigate();
-
-  // const clickVerMas = () => {
-  //   navigate(`/salida/${encodeURIComponent(salida.nombre)}`, {
-  //     state: { salida },
-  //   });
-  // };
 
   const renderStars = () => {
     const totalStars = 5;
@@ -42,7 +35,7 @@ export default function Salidas({ salida }) {
         <p className="salida__categoria">{salida.categoria}</p>
         <div className="salida__calificacion">{renderStars()}</div>
         <p className="salida__precio">
-          {salida.precio > 0 ? "$ " + salida.precio : "Gratis"}
+          {salida.precio}
         </p>
         <Link
           to={`/salida/${encodeURIComponent(salida.nombre)}`}
