@@ -1,0 +1,32 @@
+.loMasElegido {
+    background-color: #FFFFFF;
+    padding: 5rem 0rem;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.lomas__titulo {
+    text-align: center;
+}
+
+.lomas__descripcion {
+    text-align: center;
+    color: #727272;
+    margin-bottom: 10rem;
+}
+
+.salidas {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .salidas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
