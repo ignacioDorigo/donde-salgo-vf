@@ -104,6 +104,7 @@ export default function MainSalidaSeleccionada({ salida }) {
 
         <div className="ubicacion">
           <iframe
+            className="ubicacion__mapita"
             title="Mapa"
             src={`https://www.google.com/maps?q=${encodeURIComponent(
               salida.ubicacion
