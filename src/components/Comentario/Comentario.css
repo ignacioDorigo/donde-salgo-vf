@@ -47,8 +47,14 @@
 }
 
 .comentario-texto {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.5;
     color: #222;
     margin-top: 0.4rem;
+}
+
+@media (min-width: 768px){
+    .comentario-texto{
+        font-size: 1.5rem;
+    }
 }
