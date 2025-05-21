@@ -27,7 +27,7 @@ export default function Comentario({ comentario }) {
           onError={(e) => (e.target.src = "https://i.pravatar.cc/50")}
         />
         <div className="comentario__usuarioInfo">
-          <strong>{comentario.usuario}</strong>
+          <strong className="comentario__nombre">{comentario.usuario}</strong>
           <span className="comentario-ubicacion">
             {comentario.zona}, Argentina
           </span>

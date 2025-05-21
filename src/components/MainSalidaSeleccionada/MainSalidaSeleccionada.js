@@ -88,7 +88,6 @@ export default function MainSalidaSeleccionada({ salida }) {
         </div>
 
         <div className="comentarios">
-          <h2>Comentarios</h2>
           {salida.comentarios?.map((comentario, index) => (
             <Comentario comentario={comentario} key={index} />
           ))}
