@@ -1,0 +1,93 @@
+.salida__bg {
+  background-color: #f9f9f9;
+  padding: 5rem 0 3rem 0;
+}
+
+.contenedor {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.tarjeta {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.carrusel {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.galeria-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 2rem;
+  padding: 0 12px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flecha.izq {
+  left: 15px;
+}
+
+.flecha.der {
+  right: 15px;
+}
+
+.info {
+  font-family: "Helvetica Neue", sans-serif;
+  color: #333;
+}
+
+.titulo-salida {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subinfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.categoria {
+  background-color: #ffebee;
+  color: #c2185b;
+  padding: 0.3rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.estrellas {
+  display: flex;
+  gap: 2px;
+}
+
+hr {
+  margin: 1rem 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}

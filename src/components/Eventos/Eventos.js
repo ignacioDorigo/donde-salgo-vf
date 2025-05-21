@@ -11,31 +11,98 @@ export default function Eventos() {
 
   const salidas = [
     {
-      nombre: "Club Vértigo",
+      nombre: "Moscu",
       categoria: "Boliche",
       calificacion: 4,
       precio: 2500,
-      imagen: "/salidas/salida1.webp",
+      imagenes: [
+        "/salidas/moscu1.webp",
+        "/salidas/moscu2.webp",
+        "/salidas/moscu3.webp",
+      ],
       musica: "Electrónica",
       dia: "VIE",
+      descripcion:
+        "Moscú es uno de los boliches más populares del centro porteño. Con luces vibrantes y DJs internacionales, ofrece una experiencia inolvidable para los amantes de la música electrónica. Su pista principal vibra hasta altas horas de la madrugada, acompañada de barras bien surtidas y sectores VIP que elevan la experiencia nocturna.",
+      ubicacion:
+        "Av. Costanera Rafael Obligado 6151, C1428 Cdad. Autónoma de Buenos Aires",
+      comentarios: [
+        {
+          usuario: "Juan Pérez",
+          foto: "/usuarios/juan.jpg",
+          comentario: "¡Excelente ambiente y buena música!",
+          calificacion: 5,
+        },
+        {
+          usuario: "Lucía Fernández",
+          foto: "/usuarios/lucia.jpg",
+          comentario: "Un poco caro pero la pasé genial.",
+          calificacion: 4,
+        },
+      ],
     },
     {
-      nombre: "Bar Nocturno",
+      nombre: "Wax",
       categoria: "Bar",
       calificacion: 3,
       precio: 1500,
-      imagen: "/salidas/salida2.webp",
+      imagenes: [
+        "/salidas/salida1.webp",
+        "/salidas/wax1.webp",
+        "/salidas/wax2.webp",
+        "/salidas/wax3.webp",
+      ],
       musica: "Rock",
       dia: "JUE",
+      descripcion:
+        "Bar Nocturno es un rincón acogedor para los amantes del rock clásico y alternativo. Ubicado en el barrio de Palermo, ofrece una carta variada de tragos, cervezas artesanales y picadas. Las bandas en vivo los jueves por la noche lo convierten en un punto de encuentro ideal para desconectar con amigos.",
+      ubicacion: "Sarmiento 1728, C1042ABH Cdad. Autónoma de Buenos Aires",
+      comentarios: [
+        {
+          usuario: "Carlos Gómez",
+          foto: "/usuarios/carlos.jpg",
+          comentario: "Buena música pero el sonido podría mejorar.",
+          calificacion: 3,
+        },
+        {
+          usuario: "Sofía Martínez",
+          foto: "/usuarios/sofia.jpg",
+          comentario: "Me encantó la ambientación del lugar.",
+          calificacion: 4,
+        },
+      ],
     },
     {
-      nombre: "Refugio Dance",
+      nombre: "La Mala",
       categoria: "Boliche",
       calificacion: 4.5,
       precio: 0,
-      imagen: "/salidas/salida3.webp",
+      imagenes: [
+        "/salidas/lamala1.webp",
+        "/salidas/lamala2.webp",
+        "/salidas/lamala3.webp",
+        "/salidas/lamala4.webp",
+      ],
       musica: "Reggaetón",
       dia: "SÁB",
+      descripcion:
+        "Refugio Dance es un espacio vibrante que celebra el reggaetón y los ritmos latinos. Con entrada gratuita, se llena de jóvenes cada sábado por la noche. Las luces LED y el sistema de sonido envolvente generan una experiencia única. El público disfruta de pistas amplias y shows temáticos cada semana.",
+      ubicacion:
+        "Arco 3 y 4, Av. del Libertador 3883, C1425 ABL, Cdad. Autónoma de Buenos Aires",
+      comentarios: [
+        {
+          usuario: "Martín López",
+          foto: "/usuarios/martin.jpg",
+          comentario: "Gratis y con buena onda, ¡volveré!",
+          calificacion: 5,
+        },
+        {
+          usuario: "Valentina Ruiz",
+          foto: "/usuarios/valentina.jpg",
+          comentario: "Mucho reggaetón, ideal si te gusta ese estilo.",
+          calificacion: 4,
+        },
+      ],
     },
   ];
 
