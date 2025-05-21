@@ -255,10 +255,8 @@ export default function Eventos() {
       categoriaSeleccionada === "" ||
       salida.categoria === categoriaSeleccionada;
     const precioOk =
-      precioSeleccionado === "" ||
-      (precioSeleccionado === "gratis" && salida.precio === 0) ||
-      (precioSeleccionado === "<2000" && salida.precio < 2000) ||
-      (precioSeleccionado === ">2000" && salida.precio > 2000);
+      precioSeleccionado === "" || salida.precio === precioSeleccionado;
+
     const musicaOk =
       musicaSeleccionada === "" || salida.musica === musicaSeleccionada;
     const diaOk = diaSeleccionado === null || salida.dia === diaSeleccionado;
@@ -302,9 +300,10 @@ export default function Eventos() {
               onChange={(e) => setPrecioSeleccionado(e.target.value)}
             >
               <option value="">Precio</option>
-              <option value="gratis">Gratis</option>
-              <option value="<2000">Menos de $2000</option>
-              <option value=">2000">Más de $2000</option>
+              <option value="$">Barato</option>
+              <option value="$$">Regular</option>
+              <option value="$$$">Elevado</option>
+              <option value="$$$$">Lujo</option>
             </select>
 
             <select
