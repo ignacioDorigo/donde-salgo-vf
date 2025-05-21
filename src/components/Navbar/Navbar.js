@@ -40,10 +40,10 @@ export default function Navbar() {
 
         {/* Escritorio */}
         <div className="div__nav__enlaces">
-          <Link to="login" className="enlaces">
+          <Link to="/login" className="enlaces">
             Ingresar
           </Link>
-          <Link to="register" className="enlaces crearCuenta">
+          <Link to="/register" className="enlaces crearCuenta">
             Crear cuenta
           </Link>
         </div>
