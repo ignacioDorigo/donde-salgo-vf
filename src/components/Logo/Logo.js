@@ -8,7 +8,7 @@ export default function Logo() {
       <Link to="/">
         <img
           className="logo__img"
-          src="/logo.png"
+          src="/logo.webp"
           alt="Logo donde salgo"
           title="Logo Donde Salgo"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="div__redes">
           {/* Tiktok */}
           <a
-            href="https://www.tiktok.com/foryou"
+            href="https://www.tiktok.com/@dondesalgo?_t=ZM-8wXlj2aWx1S&_r=1"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -32,7 +32,7 @@ export default function Footer() {
 
           {/* Twitter */}
           <a
-            href="https://x.com/home"
+            href="https://x.com/dondesalgo?s=21"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -55,7 +55,7 @@ export default function Footer() {
 
           {/* Instagram */}
           <a
-            href="https://www.instagram.com/"
+            href="https://www.instagram.com/dondesalgo_?igsh=aTNvNHhuMTR4eTZu&utm_source=qr"
             target="_blank"
             rel="noopener noreferrer"
           >
