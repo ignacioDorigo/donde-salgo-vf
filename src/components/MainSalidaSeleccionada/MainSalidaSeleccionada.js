@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./MainSalidaSeleccionada.css";
 import Comentario from "../Comentario/Comentario";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Svgdollar from "../Svg/Svgdollar/Svgdollar";
+import Svgcalendar from "../Svg/Svgcalendar/Svgcalendar";
+import Svgmusic from "../Svg/Svgmusic/Svgmusic.js";
 
 export default function MainSalidaSeleccionada({ salida }) {
   const [indexActual, setIndexActual] = useState(0);
   const [imagenAmpliada, setImagenAmpliada] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    AOS.init({ duration: 800 });
+  }, []);
 
   if (!salida) return <p>No se encontró la salida seleccionada.</p>;
 
@@ -33,9 +43,23 @@ export default function MainSalidaSeleccionada({ salida }) {
     ));
   };
 
+  const getPrecioDescripcion = (nombre) => {
+    switch (nombre) {
+      case "Moscu":
+        return "Intermedios";
+      case "Wax":
+        return "Baratos";
+      case "La Mala":
+        return "Elevados";
+      default:
+        return "Regulares";
+    }
+  };
+
   return (
     <div className="salida__bg">
       <div className="salida-detalle contenedor tarjeta">
+        {/* IMAGEN */}
         <div className="carrusel">
           <button className="flecha izq" onClick={anteriorImagen}>
             ‹
@@ -43,14 +67,16 @@ export default function MainSalidaSeleccionada({ salida }) {
           <img
             src={imagenes[indexActual]}
             alt={`Imagen ${indexActual}`}
-            className="galeria-img"
+            className={`galeria-img visible`}
             onClick={() => setImagenAmpliada(true)}
           />
+
           <button className="flecha der" onClick={siguienteImagen}>
             ›
           </button>
         </div>
 
+        {/* INFO DEL BOLICHE */}
         <div className="info">
           <h1 className="titulo-salida">{salida.nombre}</h1>
           <div className="subinfo">
@@ -58,25 +84,25 @@ export default function MainSalidaSeleccionada({ salida }) {
             <div className="estrellas">{renderStars(salida.calificacion)}</div>
           </div>
           <hr />
-          <p>
-            <strong>Precio:</strong>{" "}
-            {salida.precio > 0 ? `$${salida.precio}` : "Gratis"}
-          </p>
-          <p>
-            <strong>Estilo musical:</strong> {salida.musica}
-          </p>
-          <p>
-            <strong>Día:</strong> {salida.dia}
-          </p>
-        </div>
-
-        <div className="descripcion">
-          <h2>Descripción</h2>
           <p>{salida.descripcion}</p>
+
+          <div className="div__detalles">
+            <div className="detalle detalle__dollar">
+              <Svgdollar />
+              <p>{getPrecioDescripcion(salida.nombre)}</p>
+            </div>
+            <div className="detalle detalle__calendar">
+              <Svgcalendar />
+              <p>{salida.dia}</p>
+            </div>
+            <div className="detalle detalle__music">
+              <Svgmusic />
+              <p>{salida.musica}</p>
+            </div>
+          </div>
         </div>
 
         <div className="ubicacion">
-          <h2>Ubicación</h2>
           <iframe
             title="Mapa"
             src={`https://www.google.com/maps?q=${encodeURIComponent(
@@ -89,7 +115,11 @@ export default function MainSalidaSeleccionada({ salida }) {
 
         <div className="comentarios">
           {salida.comentarios?.map((comentario, index) => (
-            <Comentario comentario={comentario} key={index} />
+            <Comentario
+              comentario={comentario}
+              key={index}
+              data-aos="fade-up"
+            />
           ))}
         </div>
       </div>

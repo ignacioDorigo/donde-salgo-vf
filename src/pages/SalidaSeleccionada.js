@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useLocation } from "react-router-dom";
 import "./SalidaSeleccionada.css";
 import Navbar from "../components/Navbar/Navbar";

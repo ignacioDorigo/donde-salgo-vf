@@ -36,7 +36,8 @@ export default function Eventos() {
       musica: "Electrónica",
       dia: "VIE",
       descripcion:
-        "Moscú es uno de los boliches más populares del centro porteño...",
+        "Moscú es uno de los boliches más icónicos del centro porteño, conocido por su energía vibrante, espectáculos de luces de última generación y una pista de baile que nunca se vacía. El lugar fusiona la estética industrial con detalles modernos que crean un ambiente sofisticado pero accesible. DJs nacionales e internacionales giran en sus cabinas todos los fines de semana, haciendo que cada noche sea una experiencia distinta. Su ubicación frente a la Costanera lo convierte en un punto ideal para quienes buscan una previa con vista y una noche intensa hasta el amanecer. Ideal para grupos de amigos o salidas especiales.",
+
       ubicacion:
         "Av. Costanera Rafael Obligado 6151, C1428 Cdad. Autónoma de Buenos Aires",
       comentarios: [
@@ -95,7 +96,9 @@ export default function Eventos() {
       ],
       musica: "Rock",
       dia: "JUE",
-      descripcion: "Wax es un bar clásico con un toque moderno...",
+      descripcion:
+        "Wax es un bar con alma rockera que combina lo clásico con un toque moderno y relajado. Con paredes adornadas de vinilos, luces cálidas y un ambiente acogedor, es el sitio perfecto para quienes buscan buena música y cervezas artesanales. El bar ofrece una variada carta de tragos y picadas, y suele haber bandas en vivo o sesiones de DJ que mantienen la noche en movimiento sin necesidad de grandes estridencias. La atención es amable y el público, diverso y distendido. Un excelente lugar para arrancar la noche o simplemente relajarse entre amigos cualquier día de la semana.",
+
       ubicacion: "Sarmiento 1728, C1042ABH Cdad. Autónoma de Buenos Aires",
       comentarios: [
         {
@@ -154,7 +157,8 @@ export default function Eventos() {
       musica: "Reggaetón",
       dia: "SÁB",
       descripcion:
-        "La Mala es un boliche vibrante que celebra el reggaetón y los ritmos latinos...",
+        "La Mala es uno de los boliches más populares para los amantes del reggaetón y los ritmos latinos. Con una ambientación tropical, luces neón, y una pista que se enciende apenas cae la noche, este lugar garantiza fiesta sin interrupciones. Su estratégica ubicación en los Arcos del Rosedal le da un aire urbano chic, con seguridad y comodidad. Además de la música, cuenta con barras amplias, sectores VIP, y animaciones en vivo que suben la temperatura del lugar. Perfecto para salir con amigas o celebrar una noche especial a puro perreo y diversión hasta altas horas.",
+
       ubicacion:
         "Arco 3 y 4, Av. del Libertador 3883, C1425 ABL, Cdad. Autónoma de Buenos Aires",
       comentarios: [
