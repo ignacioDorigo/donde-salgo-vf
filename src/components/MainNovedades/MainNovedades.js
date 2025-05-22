@@ -1,123 +1,152 @@
-import React from "react";
+import React, { useState }from "react";
 import "./MainNovedades.css";
 
-export default function MainNovedades() {
-  const novedades = [
-    {
-      nombre: "NEON Rooftop",
-      categoria: "Bar de terraza",
-      calificacion: 4.9,
-      precio: "$$$",
-      imagenes: [
-        "/salidas/neon1.webp",
-        "/salidas/neon2.webp",
-        "/salidas/neon3.webp",
-      ],
-      musica: "House / Lounge",
-      dia: "JUE",
-      descripcion:
-        "Inaugurado hace pocas semanas, NEON Rooftop mezcla tragos de autor, vistas increíbles y una ambientación con luces neón que le da su nombre. La experiencia es moderna y relajada, con DJ en vivo y una carta gourmet.",
-      ubicacion: "Av. Figueroa Alcorta 3100, CABA",
-      comentarios: [
-        {
-          usuario: "Aldana Sosa",
-          foto: "https://i.pravatar.cc/50?img=21",
-          comentario: "Muy exclusivo, vale la pena.",
-          calificacion: 5,
-          zona: "Palermo",
-          fechaComentario: "14 de mayo de 2025",
-        },
-      ],
-    },
-    {
-      nombre: "Distrito Food & Beats",
-      categoria: "Patio gastronómico",
-      calificacion: 4.7,
-      precio: "$$",
-      imagenes: ["/salidas/distritofood1.webp", "/salidas/distritofood2.webp"],
-      musica: "Comercial / Electrónica",
-      dia: "VIE",
-      descripcion:
-        "Una nueva propuesta en la zona sur con foodtrucks, tragos, luces led, y un sector de DJs. Combina buena comida con ambiente de boliche suave. Ideal para un plan relajado con amigos sin dejar de moverse.",
-      ubicacion: "Av. Caseros 1900, Parque Patricios, CABA",
-      comentarios: [
-        {
-          usuario: "Bruno Larrea",
-          foto: "https://i.pravatar.cc/50?img=30",
-          comentario: "Todo nuevo, muy bien ambientado.",
-          calificacion: 5,
-          zona: "Constitución",
-          fechaComentario: "13 de mayo de 2025",
-        },
-      ],
-    },
-    {
-      nombre: "Subsuelo 88",
-      categoria: "Boliche alternativo",
-      calificacion: 4.8,
-      precio: "$$",
-      imagenes: ["/salidas/subsuelo1.webp", "/salidas/subsuelo2.webp"],
-      musica: "Techno / Minimal",
-      dia: "SÁB",
-      descripcion:
-        "Un boliche nuevo escondido en un sótano con estética industrial, luces oscuras y sonido brutal. Pensado para amantes de lo alternativo, los sonidos profundos y las pistas sin etiquetas.",
-      ubicacion: "Lambaré 888, Almagro, CABA",
-      comentarios: [
-        {
-          usuario: "Rocío Gómez",
-          foto: "https://i.pravatar.cc/50?img=7",
-          comentario: "Increíble propuesta, nada comercial.",
-          calificacion: 5,
-          zona: "Almagro",
-          fechaComentario: "12 de mayo de 2025",
-        },
-      ],
-    },
-    {
-      nombre: "El Refugio de los Juegos",
-      categoria: "Bar friki / temático",
-      calificacion: 4.6,
-      precio: "$",
-      imagenes: ["/salidas/refugio1.webp", "/salidas/refugio2.webp"],
-      musica: "Anime / 8bit",
-      dia: "MIÉ",
-      descripcion:
-        "Ideal para fans del anime, los videojuegos y el rol. Juegos de mesa, consolas retro, cosplays y birras temáticas. Recién abierto y ya se volvió viral entre la comunidad otaku.",
-      ubicacion: "Av. Corrientes 4517, CABA",
-      comentarios: [
-        {
-          usuario: "Kevin Urquiza",
-          foto: "https://i.pravatar.cc/50?img=17",
-          comentario: "¡Por fin algo para los gamers!",
-          calificacion: 5,
-          zona: "Villa Crespo",
-          fechaComentario: "10 de mayo de 2025",
-        },
-      ],
-    },
-    {
-      nombre: "Satori Bar",
-      categoria: "Bar oculto / speakeasy",
-      calificacion: 4.9,
-      precio: "$$$",
-      imagenes: ["/salidas/satori1.webp", "/salidas/satori2.webp"],
-      musica: "Jazz / Lofi",
-      dia: "JUE",
-      descripcion:
-        "Inspirado en la estética japonesa, Satori es un bar oculto detrás de una librería. Tragos refinados, silencio respetuoso y atención al detalle. Ideal para citas, charlas profundas o quienes buscan algo fuera de lo común.",
-      ubicacion: "Dirección secreta (se accede con reserva)",
-      comentarios: [
-        {
-          usuario: "Florencia Bianco",
-          foto: "https://i.pravatar.cc/50?img=42",
-          comentario: "¡Una experiencia completamente distinta!",
-          calificacion: 5,
-          zona: "Villa Urquiza",
-          fechaComentario: "9 de mayo de 2025",
-        },
-      ],
-    },
-  ];
+const novedades = [
+  {
+    nombre: "Beer Stadium",
+    categoria: "Bar deportivo",
+    tags: ["fútbol"],
+    calificacion: 4.6,
+    precio: "$9.000 P/P aprox",
+    imagenes: ["/salidas/beer-stadium.webp"],
+    musica: "Rock / Cumbia",
+    dia: "DOM",
+    descripcion:
+      "Pantallas gigantes, mesas largas y cerveza tirada. Ideal para mirar el partido con amigos y vivirlo como en la cancha. Ambiente futbolero full.",
+    ubicacion: "Av. Libertador 5000, CABA",
+  },
+  {
+    nombre: "Fútbol & Burgers",
+    categoria: "Gastrobar temático",
+    tags: ["fútbol"],
+    calificacion: 4.8,
+    precio: "$12.000 P/P aprox",
+    imagenes: ["/salidas/futbol-burgers.webp"],
+    musica: "Pop / Comercial",
+    dia: "SÁB",
+    descripcion:
+      "Hamburguesas gigantes, camisetas colgadas y partidos proyectados todo el día. Ideal para hinchas y para salir con amigos antes o después del estadio.",
+    ubicacion: "Av. Corrientes 6000, CABA",
+  },
+  {
+    nombre: "FREDDYS Retro Bar",
+    categoria: "Bar arcade",
+    tags: ["videojuegos"],
+    calificacion: 4.7,
+    precio: "$13.000 P/P aprox",
+    imagenes: ["/salidas/arcadia.webp"],
+    musica: "Synthwave / 8bit",
+    dia: "MIÉ",
+    descripcion:
+      "Un bar con consolas retro, flippers y tragos con nombres gamer. Para jugar, tomar algo y conectar con lo friki en comunidad.",
+    ubicacion: "Av. Santa Fe 3400, CABA",
+  },
+  {
+    nombre: "Pixel House",
+    categoria: "Café gamer",
+    tags: ["videojuegos"],
+    calificacion: 4.9,
+    precio: "$15.000 P/P aprox",
+    imagenes: ["/salidas/pixel-house.webp"],
+    musica: "Lo-fi / K-pop",
+    dia: "JUE",
+    descripcion:
+      "Decoración geek, consolas modernas y espacios para streamers. Todo pensado para gamers y creadores de contenido.",
+    ubicacion: "Malabia 2100, Palermo, CABA",
+  },
+  {
+    nombre: "Mirador 360 Rooftop",
+    categoria: "Bar con vista",
+    tags: ["citas"],
+    calificacion: 4.8,
+    precio: "$20.000 P/P aprox",
+    imagenes: ["/salidas/mirador360.webp"],
+    musica: "Chill / Electrónica suave",
+    dia: "VIE",
+    descripcion:
+      "Rooftop con vista panorámica de Buenos Aires. Luz tenue, tragos de autor y ambientación romántica. Ideal para una cita top.",
+    ubicacion: "Edificio Vista Tower, CABA",
+  },
+  {
+    nombre: "Jardín Oculto",
+    categoria: "Bar speakeasy",
+    tags: ["citas"],
+    calificacion: 4.9,
+    precio: "$18.000 P/P aprox",
+    imagenes: ["/salidas/jardin-oculto.webp"],
+    musica: "Jazz / Lofi",
+    dia: "SÁB",
+    descripcion:
+      "Un jardín secreto detrás de una florería. Silencioso, íntimo y con bebidas premium. Perfecto para charlar tranquilo o sorprender en una cita.",
+    ubicacion: "Ubicación secreta (se accede por reserva)",
+  },
+];
 
-  return <div>MainNovedades</div>;
-}
+const filtrarPorTag = (tag) =>
+  novedades.filter((lugar) => lugar.tags.includes(tag));
+
+const Seccion = ({ titulo, tag, searchTerm }) => {
+  const lugares = filtrarPorTag(tag).filter((lugar) =>
+    lugar.nombre.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  return (
+    <div className="seccion" id={tag}>
+      <h2>{titulo}</h2>
+      <div className="tarjetas-novedades">
+        {lugares.map((item, i) => (
+          <div key={i} className="tarjetas">
+            <div className="imagen-wrapper">
+              <img src={item.imagenes[0]} alt={item.nombre} />
+              <span className="dia">{item.dia}</span>
+              <span className="categoria">{item.categoria}</span>
+            </div>
+            <div className="contenido">
+              <h3>{item.nombre}</h3>
+              <p className="descripcion">{item.descripcion}</p>
+              <p>🎵 {item.musica}</p>
+              <p>📍 {item.ubicacion}</p>
+              <div className="stats">
+                <span>⭐ {item.calificacion}</span>
+                <span>💰 {item.precio}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const MainNovedades = () => {
+  const [searchTerm, setSearchTerm] = useState(""); // <--- esta línea soluciona todo
+  return (
+    <section className="novedades-modernas">
+      <h1 className="titulo">✨ Novedades según tus intereses ✨</h1>
+  
+      {/* 🔍 Buscador */}
+      <input
+        type="text"
+        placeholder="🔍 Buscar por nombre..."
+        className="buscador"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+  
+      {/* 🧭 Submenú de navegación por secciones */}
+      <div className="subnav">
+        <a href="#fútbol">⚽ Fútbol</a>
+        <a href="#videojuegos">🎮 Videojuegos</a>
+        <a href="#citas">💘 Citas</a>
+      </div>
+  
+      {/* 🧱 Las secciones filtradas */}
+      <Seccion titulo="⚽ Para los amantes del fútbol" tag="fútbol" searchTerm={searchTerm} />
+      <Seccion titulo="🎮 Para fans de los videojuegos" tag="videojuegos" searchTerm={searchTerm}/>
+      <Seccion titulo="💘 Para una cita especial" tag="citas" searchTerm={searchTerm}/>
+    </section>
+  );
+  
+};
+
+export default MainNovedades;
+
