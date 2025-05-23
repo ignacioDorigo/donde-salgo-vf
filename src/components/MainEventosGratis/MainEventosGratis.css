@@ -1,0 +1,206 @@
+/* ===== CONTENEDOR GENERAL ===== */
+.eventos-gratis-modernos {
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom, #1e1e2f, #14142b);
+    color: #ffffff;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* ===== TÍTULO PRINCIPAL ===== */
+  .titulo {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: #ffdd57;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* ===== BUSCADOR ===== */
+  .buscador {
+    display: block;
+    margin: 0 auto 2rem auto;
+    padding: 0.9rem 1.4rem;
+    width: 90%;
+    max-width: 480px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.05rem;
+    background-color: #eeeeff;
+    color: #1a1a2e;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .buscador:focus {
+    box-shadow: 0 0 10px #ffdd57;
+  }
+  
+  /* ===== SUBNAV ===== */
+  .subnav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .subnav a {
+    padding: 0.7rem 1.5rem;
+    background: #ffdd57;
+    color: #1a1a2e;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .subnav a:hover {
+    background: #ffc107;
+    transform: scale(1.05);
+  }
+  
+  /* ===== SECCIONES ===== */
+  .seccion-evento {
+    margin-bottom: 4rem;
+  }
+  
+  .seccion-evento h2 {
+    font-size: 1.9rem;
+    margin: 0 auto 2rem auto;
+    color: #ffdd57;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #ffdd57;
+    width: fit-content;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .tarjetas-eventos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* ✅ Centrado horizontal */
+    gap: 1rem;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  
+  
+  /* ===== TARJETA INDIVIDUAL ===== */
+  .tarjeta-evento {
+    background: #292654;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    max-width: 300px;
+    width: 100%;
+    margin: 0; /* ✅ sin auto */
+  }
+  
+  .tarjeta-evento:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* ===== IMAGEN DE TARJETA ===== */
+  .imagen-wrapper {
+    position: relative;
+  }
+  
+  .imagen-wrapper img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .dia-evento,
+  .categoria-evento {
+    position: absolute;
+    top: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .dia-evento {
+    left: 10px;
+    background: #7c4dff;
+  }
+  
+  .categoria-evento {
+    right: 10px;
+    background: #ff5e78;
+  }
+  
+  /* ===== CONTENIDO DE LA TARJETA ===== */
+  .contenido-evento {
+    padding: 0.8rem;
+  }
+  
+  
+  .contenido-evento h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #f4d340;
+  }
+  
+  .descripcion-evento {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+    color: #dddddd;
+    line-height: 1.4;
+  }
+  
+  .contenido-evento p {
+    font-size: 0.95rem;
+    margin: 0.3rem 0;
+    color: #e0e0e0;
+  }
+  
+  /* ===== STATS ===== */
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #ffdd57;
+  }
+  
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 480px) {
+    .titulo {
+      font-size: 2.2rem;
+    }
+  
+    .seccion-evento h2 {
+      font-size: 1.5rem;
+    }
+  
+    .contenido-evento h3 {
+      font-size: 1.2rem;
+    }
+  
+    .descripcion-evento {
+      font-size: 0.9rem;
+    }
+  
+    .contenido-evento p {
+      font-size: 0.85rem;
+    }
+  
+    .stats {
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+  }
+  
