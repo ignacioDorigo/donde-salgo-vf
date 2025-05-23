@@ -1,0 +1,44 @@
+.login__container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Imagen lateral izquierda */
+.login__image {
+    flex: 1;
+    background-image: url("../../public/bannerLogin3.jpg");
+    /* Cambiá esta ruta a la imagen que uses */
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(70%);
+    /* ← esto aplica blanco y negro */
+}
+
+
+
+
+/* Formulario a la derecha */
+.login__form-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .login__container {
+        flex-direction: column;
+    }
+
+    .login__image {
+        height: 35vh;
+    }
+
+    .login__form-wrapper {
+        flex: none;
+        padding: 2rem;
+    }
+}
