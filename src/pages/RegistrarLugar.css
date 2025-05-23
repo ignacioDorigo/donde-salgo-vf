@@ -1,0 +1,65 @@
+.formulario-lugar {
+    background: linear-gradient(to bottom, #1e1e2f, #14142b);
+    color: #ffffff;
+    padding: 5rem 2rem;
+    min-height: 100vh;
+  }
+  
+  .formulario-lugar__contenedor {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .formulario-lugar h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    color: #ffdd57;
+  }
+  
+  .formulario-lugar p {
+    color: #dddddd;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  form input,
+  form select,
+  form textarea {
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    color: #333;
+    outline: none;
+  }
+  
+  form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  form button {
+    padding: 1rem;
+    background-color: #ffdd57;
+    color: #1a1a2e;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #ffc107;
+    transform: scale(1.05);
+  }
+  
