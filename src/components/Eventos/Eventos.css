@@ -190,3 +190,17 @@
     text-align: center;
     margin-top: 3rem;
 }
+
+@media (max-width: 768px) {
+    .eventos__titulo,
+    .explorar__titulo {
+      text-align: center;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .div__filtros {
+      align-items: center;
+    }
+  }

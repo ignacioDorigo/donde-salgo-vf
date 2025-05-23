@@ -12,11 +12,11 @@ export default function Eventos() {
   const renderPrecioSimbolico = (nombre) => {
     switch (nombre) {
       case "Moscu":
-        return "$$";
+        return "+21";
       case "Wax":
-        return "$";
+        return "+18";
       case "La Mala":
-        return "$$$";
+        return "+18";
       default:
         return "$";
     }
@@ -332,7 +332,9 @@ export default function Eventos() {
             {/* Mobile */}
             <div className="salidas__carousel">
               <button className="carousel__flecha left" onClick={anterior}>
-                ‹
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+              </svg>
               </button>
               <div className="salida__caja_unica">
                 <Salidas
@@ -342,7 +344,9 @@ export default function Eventos() {
                 />
               </div>
               <button className="carousel__flecha right" onClick={siguiente}>
-                ›
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+              </svg>
               </button>
             </div>
           </>
