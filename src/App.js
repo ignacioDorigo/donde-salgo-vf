@@ -8,7 +8,7 @@ import SalidaSeleccionada from "./pages/SalidaSeleccionada";
 import "./App.css";
 import Login from "./pages/Login.js";
 import Register from "./pages/Register.js";
-
+import RegistrarLugar from "./pages/RegistrarLugar.js"; // o según la carpeta
 export default function App() {
   return (
     <Router>
@@ -20,6 +20,7 @@ export default function App() {
         <Route path="/salida/:id" element={<SalidaSeleccionada />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/registrar" element={<RegistrarLugar />} />
       </Routes>
     </Router>
   );
