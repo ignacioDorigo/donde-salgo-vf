@@ -398,6 +398,28 @@ export default function MainLoMasElegido() {
         },
       ],
     },
+    {
+      nombre: "PyN WEB",
+      categoria: "Boliche",
+      calificacion: 4.7,
+      precio: renderPrecioSimbolico("Beat Basement"),
+      imagenes: ["/salidas/uade.webp", "/salidas/beat2.webp"],
+      musica: "Teoria",
+      dia: "VIERNES",
+      descripcion:
+        "Un subsuelo que late con beats potentes. Beat Basement es un lugar alternativo donde reina la oscuridad, la pista vibrante y la comunidad rave. No es para todos, pero si te gusta el género, te vas a sentir en casa.",
+      ubicacion: "Lavalle 849, CABA",
+      comentarios: [
+        {
+          usuario: "César Medina",
+          foto: "https://i.pravatar.cc/50?img=41",
+          comentario: "Pura energía. Re underground.",
+          calificacion: 5,
+          zona: "San Nicolás",
+          fechaComentario: "31 de marzo de 2025",
+        },
+      ],
+    },
   ];
   return (
     <>
