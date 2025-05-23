@@ -28,22 +28,10 @@
   }
   
   /* ===== GRILLA DE TARJETAS ===== */
-  .tarjetas-novedades {
-    display: grid;
-    gap: 2rem;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 300px));
-  }
+
   
   /* ===== TARJETA INDIVIDUAL ===== */
-  .tarjetas {
-    background: #292654; /* fondo oscuro violeta-azulado */
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-  }
+
   
   .tarjetas:hover {
     transform: scale(1.02);
@@ -84,23 +72,20 @@
   }
   
   /* ===== CONTENIDO DE LA TARJETA ===== */
-  .contenido {
-    padding: 1rem;
-  }
+
   
-  .contenido h3 {
-    font-size: 1.4rem;
-    margin-bottom: 0.2rem; /* espacio más reducido */
-    color: #ffffff;
-  }
+
   
-  /* DESCRIPCIÓN CORTA */
+  
   .descripcion {
     font-size: 1rem;
-    margin-top: 0.2rem;
-    margin-bottom: 0.6rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
     color: #dddddd;
   }
+  
+  
   
   /* DETALLES EXTRA (música, ubicación) */
   .detalles p {
@@ -167,5 +152,263 @@
   
   .buscador:focus {
     box-shadow: 0 0 10px #ffdd57;
+  }
+  
+
+  .boton-reservar {
+    display: block;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 28px;
+    background: linear-gradient(to right, #ffdd57, #ffc107);
+    color: #1a1a2e;
+    border: none;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+  
+  .boton-reservar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(to right, #ffc107, #ffdd57);
+  }
+  
+
+
+
+  .boton-reservar {
+    display: block;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 28px;
+    background: linear-gradient(to right, #ffdd57, #ffc107);
+    color: #1a1a2e;
+    border: none;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+  
+  .boton-reservar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(to right, #ffc107, #ffdd57);
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-contenido {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .modal-contenido h2 {
+    margin-bottom: 1rem;
+    color: #1a1a2e;
+  }
+  
+  .form-reserva input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.6rem 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .form-reserva button {
+    background-color: #ffdd57;
+    color: #1a1a2e;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    margin-top: 1rem;
+    border-radius: 999px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-reserva button:hover {
+    background-color: #ffc107;
+  }
+  
+  .cerrar {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+
+
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    scrollbar-width: none;
+    height: auto;         /* ✅ Permití que crezca */
+
+  }
+  
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .tarjetas {
+    flex: 0 0 300px;
+    max-width: 300px;
+    background: #292654; /* ✅ violeta oscuro */
+    color: white; /* ✅ texto blanco para que se vea bien */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;         /* ✅ Permití que se acomode */
+
+  }
+  
+  .tarjeta:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+  }
+  
+  .imagen-wrapper img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+
+  .contenido {
+    padding: 1rem;
+    min-height: 230px; /* Ajustable según tu diseño */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+
+  .contenido h3 {
+    font-size: 1.8rem; /* ✅ más grande */
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: #f0c54f;
+  }
+  
+  .descripciont {
+    font-size: 1.3rem; /* corregido */
+    line-height: 1.3;
+    color: #f9e0b1;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #ffdd57;
+  }
+  
+  
+  .flechar {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffdd57;
+    color: #1a1a2e;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 10;
+  }
+  
+  .flechar:hover {
+    background-color: #ffc107;
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .flechar.izquierda {
+    left: -5rem;
+  }
+  
+  .flechar.derecha {
+    right: -5rem;
+  }
+  
+
+
+  @media (min-width: 576px) {
+    .tarjetas {
+      flex: 0 0 80%;
+      max-width: 80%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .tarjetas {
+      flex: 0 0 45%;
+      max-width: 45%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .tarjetas {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .tarjetas {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+  }
+  
+
+  @media (max-width: 767px) {
+    .flechar {
+      display: none;
+    }
   }
   
